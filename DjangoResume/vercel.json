@@ -1,0 +1,23 @@
+{
+    "builds": [{
+        "src": "DjangoResume/wsgi.py",
+        "use": "@vercel/python",
+        "config": { "maxLambdaSize": "15mb", "runtime": "python3.9" }
+    },
+    {
+        "src": "staticfiles/**",
+        "use": "@vercel/static"
+    }
+
+],
+    "routes": [
+        {
+            "src": "/(.*)",
+            "dest": "DjangoResume/wsgi.py"
+        },
+        {
+            "src": "/static/(.*)",
+            "dest": "/staticfiles/$1"
+        }
+    ]
+}

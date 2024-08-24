@@ -7,7 +7,7 @@ pip install -r DjangoResume/requirements.txt
 
 
 
-uvicorn DjangoResume.asgi:application
+uvicorn DjangoResume.DjangoResume.asgi:application
 
 # Convert static asset files
 python DjangoResume/manage.py collectstatic --no-input

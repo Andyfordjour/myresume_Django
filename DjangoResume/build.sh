@@ -6,7 +6,8 @@ set -o errexit
 pip install -r DjangoResume/requirements.txt
 
 
-export PYTHONPATH=/path/to/your/project:$PYTHONPATH
+
+uvicorn DjangoResume.asgi:application
 
 # Convert static asset files
 python DjangoResume/manage.py collectstatic --no-input

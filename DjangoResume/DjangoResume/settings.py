@@ -72,7 +72,7 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'DjangoResume.wsgi.application'
-ASGI_APPLICATION = "DjangoResume.settings"
+
 
 
 # Database
